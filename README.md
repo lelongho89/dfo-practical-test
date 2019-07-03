@@ -46,6 +46,6 @@ Use Swagger UI or Postman or curl
 
 3. Create User: curl -X POST "http://localhost:5000/api/users" -H "Content-Type: application/json" -d "{\"name\":\"Joe\",\"age\":30,\"address\":\"123 ABC\"}"
 
-4. Update User: curl -X PUT "http://localhost:5000/api/users/11" -H "Content-Type: application/jso" -d "{\"name\":\"Test\",\"age\":33,\"address\":\"Testa add\"}"
+4. Update User: curl -X PUT "http://localhost:5000/api/users/11" -H "Content-Type: application/json" -d "{\"name\":\"Test\",\"age\":33,\"address\":\"Testa add\"}"
 
 5. Delete User: curl -X DELETE "http://localhost:5000/api/users/11"
