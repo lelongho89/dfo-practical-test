@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\PracticalTest.Api\PracticalTest.Api.csproj" />
+    <ProjectReference Include="..\PracticalTest.Api\PracticalTest.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>

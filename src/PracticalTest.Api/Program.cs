@@ -18,7 +18,23 @@ namespace PracticalTestApi
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+            new WebHostBuilder()
+                .UseUrls("http://*:5000")
+                .UseKestrel(k => { k.AddServerHeader = false; })
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIIS()
+                .UseStartup<Startup>()
+                .ConfigureLogging((hostContext, builder) =>
+                {
+                    builder.AddConfiguration(hostContext.Configuration.GetSection("logging"));
+                })
+                .ConfigureAppConfiguration((hostContext, builder) =>
+                {
+                    builder.Sources.Clear();
+                    builder.AddJsonFile("appsettings.json", true, true);
+                    builder.AddJsonFile($"appsettings.{hostContext.HostingEnvironment.EnvironmentName}.json", true);
+                    builder.AddEnvironmentVariables();
+                    builder.AddCommandLine(args);
+                });
     }
 }
