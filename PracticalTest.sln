@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticalTest.Api", "src\PracticalTest.Api\PracticalTest.Api.csproj", "{437DD5BD-1485-4A0F-9254-7FE3D8C6A9DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalTest.Tests", "PracticalTest.Tests\PracticalTest.Tests.csproj", "{A6EF6F02-E8BC-4BEB-98DA-28D631B0DD79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalTest.Tests", "src\PracticalTest.Tests\PracticalTest.Tests.csproj", "{A6EF6F02-E8BC-4BEB-98DA-28D631B0DD79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
