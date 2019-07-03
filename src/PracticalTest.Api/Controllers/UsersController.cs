@@ -10,7 +10,7 @@ namespace PracticalTestApi.Controllers
 {
     [Route("api/users")]
     [ApiController]
-    [NotFoundFilter]
+    [NotFoundFilterAttribute]
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;

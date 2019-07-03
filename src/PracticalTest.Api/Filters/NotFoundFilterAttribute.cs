@@ -4,7 +4,7 @@ using PracticalTestApi.Exceptions;
 
 namespace PracticalTestApi.Filters
 {
-    public class NotFoundFilter : ActionFilterAttribute, IExceptionFilter
+    public class NotFoundFilterAttribute : ActionFilterAttribute, IExceptionFilter
     {   public void OnException(ExceptionContext context)
         {
             if (context.Exception is DomainNotFoundException)
