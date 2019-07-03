@@ -33,7 +33,7 @@ Open http://localhost:5000 and use Swagger UI.
 
 ## Run with Visual Studio
 1. git clone https://github.com/lelongho89/dfo-practical-test
-2. Open .Sln
+2. Open PracticalTest.Sln
 3. Build and Run with IIS or IIS Express
 
 # Test the API
