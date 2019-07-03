@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using PracticalTestApi.Models;
 using PracticalTestApi.Services.Dtos;
 
-namespace PracticalTestApi.Services
+namespace PracticalTestApi.Mappings
 {
     /// <summary>
     /// AutoMapper extensions.

@@ -10,7 +10,7 @@ namespace PracticalTestApi.Controllers
 {
     [Route("api/users")]
     [ApiController]
-    [ApiExceptionFilter]
+    [NotFoundFilter]
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -23,7 +23,7 @@ namespace PracticalTestApi.Controllers
 
         // GET: api/users
         [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<User>), 200)]
+        [ProducesResponseType(typeof(IEnumerable<UserDto>), 200)]
         public IActionResult GetUsers()
         {
             return Ok(_userService.GetAllUsers());
@@ -35,13 +35,13 @@ namespace PracticalTestApi.Controllers
         public IActionResult GetUser(int id)
         {
             var user = _userService.GetUser(id);
+            
             return Ok(user);
         }
 
         // POST: api/users
         [HttpPost]
         [ProducesResponseType(typeof(UserDto), 201)]
-        [ProducesResponseType(typeof(ErrorDto), 400)]
         public IActionResult CreateUser([FromBody] CreateUserDto model)
         {
             var createdUser = _userService.CreateUser(model);
@@ -52,7 +52,6 @@ namespace PracticalTestApi.Controllers
         // PUT: api/users/5
         [HttpPut("{id}")]
         [ProducesResponseType(typeof(UserDto), 201)]
-        [ProducesResponseType(typeof(ErrorDto), 400)]
         public IActionResult UpdateUser(int id, [FromBody] UpdateUserDto model)
         {
             model.Id = id;
@@ -63,7 +62,6 @@ namespace PracticalTestApi.Controllers
 
         // DELETE: api/users/5
         [HttpDelete("{id}")]
-        [ProducesResponseType(typeof(ErrorDto), 400)]
         public IActionResult DeleteUser(int id)
         {
             _userService.DeleteUser(id);

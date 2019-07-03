@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.Extensions.Logging;
 using PracticalTestApi.Exceptions;
 using PracticalTestApi.Models;
 using PracticalTestApi.Services.Dtos;
